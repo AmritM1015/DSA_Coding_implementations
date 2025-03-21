@@ -1,3 +1,5 @@
+package Sorting;
+
 public class InsertionSort{
     public static void sort(int[] A, int n){
         for(int i = 1; i < n; i++){ //O(n)

@@ -1,3 +1,5 @@
+package Algorithms;
+
 public class BinarySearch {
     public static void InsertionSort(int[] A, int n){
         for(int i = 1; i < n; i++){

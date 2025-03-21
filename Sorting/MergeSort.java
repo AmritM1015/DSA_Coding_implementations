@@ -1,3 +1,6 @@
+package Sorting;
+
+
 public class MergeSort {
     public static void sort(int A[], int l, int r){
         if(l < r){
