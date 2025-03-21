@@ -12,6 +12,10 @@ public class BubbleSort {
             }
             if(!swapped)
                 break;
+        // Time complexity: 
+        // Worst/Average Case: O(n^2), inner loop performing n comparisons/swaps n times
+        // Best Case O(n), BubbleSort modification that allows us to break out of the
+        // inner loop if there was no swaps.
         }
     }
     static void printArray(int arr[])
