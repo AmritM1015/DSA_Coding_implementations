@@ -3,7 +3,7 @@
 ## 📘 About This Repository
 This repository contains my **custom implementations** of **data structures and algorithms (DSA)** in **Java**, following a structured learning approach inspired by:
 - **Introduction to Algorithms (4th Edition) – Cormen, Leiserson, Rivest, Stein (CLRS)**
-- **My course syllabus on Algorithm Design and Analysis**
+- **My course syllabus on Advanced Data Structures and Algorithm Design**
 
 Each algorithm and data structure is implemented **from scratch**, with explanations of its **time complexity**, **use cases**, and **optimizations**.
 
