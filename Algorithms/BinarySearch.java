@@ -1,4 +1,4 @@
-package Algorithms;
+package algorithms;
 
 public class BinarySearch {
     public static void InsertionSort(int[] A, int n){
