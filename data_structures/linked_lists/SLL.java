@@ -1,9 +1,9 @@
 package data_structures.linked_lists;
 public class SLL {
-    Node head; // head of the list
-    static class Node{ // A single node of a linked list
+    public Node head; // head of the list
+    public static class Node{ // A single node of a linked list
         int data;
-        Node next;
+        public Node next;
         //Constructor
         Node(int d){
             data = d;
@@ -36,14 +36,68 @@ public class SLL {
         dummy_node.next = curr.next;
         curr.next = dummy_node;
         return list;
+    }
+    // Insert at the end (tail) of the list
+    public static SLL insert(SLL list, int data) {
+        Node newNode = new Node(data);
 
+        // If the list is empty, set head to the new node
+        if (list.head == null) {
+            list.head = newNode;
+        } else {
+            Node curr = list.head;
+            // Traverse to the last node
+            while (curr.next != null) {
+                curr = curr.next;
+            }
+            // Link new node at the end
+            curr.next = newNode;
+        }
+
+        return list;
     }
     public static void printList(SLL list){
-        System.out.print("Linked List: ");
+        //System.out.print("Linked List: ");
         for(Node curr = list.head; curr != null; curr=curr.next){
-            System.out.print(curr.data+" ");
+            System.out.print(" --> "+curr.data);
         }
         System.out.println("");
+    }
+    public static SLL remove(SLL list, int data) {
+        // If the list is empty
+        if (list.head == null) {
+            System.err.println("Cannot remove from an empty list.");
+            return list;
+        }
+    
+        // If the head node holds the data to be deleted
+        if (list.head.data == data) {
+            list.head = list.head.next;
+            return list;
+        }
+    
+        // Traverse the list to find the node before the one to delete
+        Node curr = list.head;
+        while (curr.next != null && curr.next.data != data) {
+            curr = curr.next;
+        }
+    
+        // If the node was found, delete it
+        if (curr.next != null && curr.next.data == data) {
+            curr.next = curr.next.next;
+        } else {
+            System.err.println("Value " + data + " not found in the list.");
+        }
+    
+        return list;
+    }
+    public static boolean findKey(Node head, int key){
+        if(head == null)
+            return false;
+        if(head.data == key)
+            return true;
+        return findKey(head.next, key);
+        
     }
     public static void main(String[] args) 
     { 
@@ -94,4 +148,7 @@ public class SLL {
         printList(list);
 
     } 
+    /*  
+     Reference: https://www.geeksforgeeks.org/implementing-a-linked-list-in-java-using-class/ 
+    */
 }

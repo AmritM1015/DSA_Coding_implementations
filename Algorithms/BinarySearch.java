@@ -55,3 +55,6 @@ middle = left/2+right/2 + left/2 - left/2
 middle = left + right/2-left/2
 middle = left + (right-left)/2
  = */
+/*
+Reference: https://www.geeksforgeeks.org/binary-search/
+*/
