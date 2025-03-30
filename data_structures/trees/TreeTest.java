@@ -34,7 +34,7 @@ public class TreeTest {
         System.out.println("Sibling of 40: " + tree.sibling(node40).data); // Should be 20
 
         // Check depth and height
-        System.out.println("Depth of node 40: " + tree.depth(node40)); // 2
+        System.out.println("Depth of node 40: " + tree.depthIterative(node40)); // 2
         System.out.println("Height of root: " + tree.height(root)); // 2
 
         // Delete external node (leaf)

@@ -1,4 +1,5 @@
 package data_structures.trees;
+import data_structures.queues.Deque;
 //Iterative
 /*
  * Search, Insert Delete Runtime: O(d) where d is depth of the tree 
@@ -33,6 +34,27 @@ public class BST{
             return 0;
         else
             return 1+ depth(v.parent);
+    }
+    public int depthIterative(TreeNode v){
+        if(v == null)
+            return 0;
+        Deque<NodeDepthPair> queue = new Deque<>();
+        queue.addLast(new NodeDepthPair(v, 0));
+        int m = 0;
+        while(!queue.isEmpty()){
+            NodeDepthPair pair = queue.popLeft();
+            TreeNode node = pair.node;
+            int depth = pair.depth;
+            if(node != null){
+                m = Math.max(m, depth);
+                if(node.left!= null)
+                    queue.addLast(new NodeDepthPair(node.left, depth+1));
+                if(node.right!= null)
+                    queue.addLast(new NodeDepthPair(node.right, depth+1));
+            }
+
+        }
+        return m;
     }
     public int height(TreeNode v){
         if(isExternal(v))
