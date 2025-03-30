@@ -1,5 +1,5 @@
 package data_structures.queues;
-//TODO:
+
 public class Deque<T> {
     private class Node{
         T data;
