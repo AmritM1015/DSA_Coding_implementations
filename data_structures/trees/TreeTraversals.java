@@ -21,5 +21,8 @@ public class TreeTraversals {
             System.out.print(v.data + " ");//perform visit action for node v
         }
     }
+    /* Traversing a Binary tree will take on average O(log n) time.
+    Worst case is O(n) because if we have all the nodes on one side,
+    it is no different from a linked list */
 
 }

@@ -1,5 +1,8 @@
 package data_structures.trees;
 //Iterative
+/*
+ * Search, Insert Delete Runtime: O(d) where d is depth of the tree 
+ */
 public class BST{
     TreeNode root;
     public BST(){
@@ -45,8 +48,7 @@ public class BST{
         else if (data > v.data)
             return TreeSearch(v.right, data);
         else
-            return TreeSearch(v.left, data); 
-
+            return TreeSearch(v.left, data);     
     }
     public void TreeInsert(int k){
         TreeNode node = new TreeNode(k);

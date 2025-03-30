@@ -49,5 +49,11 @@ public class PathSum {
         System.out.println("Has Path Sum 100: " + hasPathSum(root, 100));  // true
 
     } 
+    /*
+     * PathSum has a time complexity of:
+     * - Average case: O(log n) for balanced trees
+     * - Worst case: O(n) for skewed trees (e.g., all left or all right)
+     * We may need to visit every node in the tree in the worst case (linked list).
+    */
     //Reference: https://algo.monster/liteproblems/112
 }
