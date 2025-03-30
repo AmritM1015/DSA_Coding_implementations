@@ -19,10 +19,15 @@ public class TreeTest {
         // Check TreeSearch
         System.out.println("Search 40: " + tree.TreeSearch(tree.getRoot(), 40)); // true
         System.out.println("Search 100: " + tree.TreeSearch(tree.getRoot(), 100)); // false
-
+        
         // Check root
         TreeNode root = tree.getRoot();
         System.out.println("Is root 50? " + (root.data == 50));
+
+         //Get the leaf value sequence
+         System.out.print("Leaf Value Sequence: ");
+         tree.leafSeq(root);
+         System.out.println("");
 
         // Check internal & external
         TreeNode node40 = root.left.right; // 40
@@ -71,7 +76,6 @@ public class TreeTest {
                        \
                         80
          */
-
         // Add after building the tree and inserting nodes
         TreeTraversals traversal = new TreeTraversals();
 

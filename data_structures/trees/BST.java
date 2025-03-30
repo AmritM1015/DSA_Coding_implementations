@@ -170,5 +170,15 @@ public class BST{
     
         System.out.println("Deleted node with two children: " + w.data);
     }
-    
+    public void leafSeq(TreeNode root){
+        if (root == null)
+            return;
+        if(root.left == null && root.right == null){
+            System.out.print(root.data+" ");
+        }
+        else{
+            leafSeq(root.left);
+            leafSeq(root.right);
+        }
+    }
 }
