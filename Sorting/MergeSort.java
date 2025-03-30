@@ -57,5 +57,7 @@ public class MergeSort {
         sort(arr, 0, arr.length-1);
         printArray(arr);
     }
-    
+    /*
+     * Reference: https://www.geeksforgeeks.org/merge-sort/
+     */
 }
