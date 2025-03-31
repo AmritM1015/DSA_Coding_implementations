@@ -81,7 +81,7 @@ public class AVLTree{
             curr = curr.parent;
         }
     }
-    private int height(TreeNode node){
+    public int height(TreeNode node){
         if(node == null)
             return -1;
         return node.height;
@@ -216,5 +216,28 @@ public class AVLTree{
         }
     
         System.out.println("Deleted node with two children: " + w.data);
+    }
+    public void inOrder(TreeNode node) {
+        if (node != null) {
+            inOrder(node.left);
+            System.out.print(node.data + " ");
+            inOrder(node.right);
+        }
+    }
+    
+    public void preOrder(TreeNode node) {
+        if (node != null) {
+            System.out.print(node.data + " ");
+            preOrder(node.left);
+            preOrder(node.right);
+        }
+    }
+    
+    public void postOrder(TreeNode node) {
+        if (node != null) {
+            postOrder(node.left);
+            postOrder(node.right);
+            System.out.print(node.data + " ");
+        }
     }
 }
