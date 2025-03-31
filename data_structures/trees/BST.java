@@ -87,7 +87,6 @@ public class BST{
             else
                 w = w.right;
         }
-        node.parent = p;
         if (p != null) { //This if statement isnt actually needed but VSCode kept giving me null pointer warnings so I had to do this
             node.parent = p;
             if (k < p.data)
@@ -140,6 +139,7 @@ public class BST{
             parent.left = child; //If w is to the left of the parent, we replace it with the successor
         else
             parent.right = child; // If w is to the right of the parent, we replace it with the successor
+        child.parent = parent; //Linking the child completely to the parent
     }
     public void DeleteTwoChildren(TreeNode parent, TreeNode w) {
         TreeNode v_p = w;           // Parent of successor
