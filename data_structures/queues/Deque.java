@@ -16,7 +16,7 @@ public class Deque<T> {
         front = back = null;
         size = 0;
     }
-    public void addFirst(T value){
+    public void addFirst(T value){ //Push (Stack)
         Node node = new Node(value);
         if(front == null){
             front = node;
@@ -28,7 +28,7 @@ public class Deque<T> {
         }
         size++;
     }
-    public void addLast(T value){
+    public void addLast(T value){ //Enqueue(Queue)
         Node node = new Node(value);
         if(isEmpty()){
             front = back = node; //if the deque is empty then both the front and back are the same
@@ -40,7 +40,7 @@ public class Deque<T> {
         }
         size++;
     }
-    public T popLeft(){
+    public T popLeft(){ //Pop (Stack)
         if(isEmpty()){
             return null; //There is no node to be popped
         }
@@ -55,7 +55,7 @@ public class Deque<T> {
         size--;
         return value;
     }
-    public T popRight(){
+    public T popRight(){ //Dequeue(Stack)
         if(isEmpty()){
             return null; //There is no node to be popped
         }
